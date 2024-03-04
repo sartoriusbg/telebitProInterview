@@ -4,6 +4,7 @@
    - HTML
    - CSS
    - JavaScript
+   - PHPUnit
 
 2. Functionalities:
    - Data validation
