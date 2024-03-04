@@ -6,8 +6,8 @@ $email = null;
 
 function attempt_login($email, $password) {
   require_once "manipulateDB.php";
-
-  $user = db()->login( $email, $password);
+  $workingDB = new WorkingWithDB(new Db());
+  $user = $workingDB->login( $email, $password);
   if($user != -1 && $user["active"] == 1){
     $id = $user["id"];
     $userName = $user["name"];
@@ -25,9 +25,10 @@ function attempt_login($email, $password) {
     $_SESSION['id'] = $id;
     $_SESSION['userName'] = $userName;
     $_SESSION['email'] = $userMail;
-    $user = db()->getUser($userMail);
+    $user = $workingDB->getUser($userMail);
+    //mailing wont work without changing xampp settings
     $mailheader = "From:user<email>\r\n"; // change this so the mail works
-    mail($userMail, "Activation code", $user[0]['activation_code'], $mailheader); // wont work without setup
+    mail($userMail, "Activation code", $user[0]['activation_code'], $mailheader); 
     header('Location: validate.php');
   }
   else{

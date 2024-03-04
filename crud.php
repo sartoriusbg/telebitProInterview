@@ -15,7 +15,7 @@
         header('Location: login.php');
       }
       
-      $workingDB = new WorkingWithDB();
+      $workingDB = new WorkingWithDB(new Db());
       $users = $workingDB->getUsers();
       echo '<h2>User email is:' .  $_SESSION["email"] . '</h2>';
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -2,21 +2,13 @@
 <?php
 require_once 'db.php';
 
-function db() : WorkingWithDB {
-    return WorkingWithDB::wdb();
-}
 
 class WorkingWithDB {
     private Db $db;
-    protected static WorkingWithDB $wdb;
 
-   public function __construct() 
+   public function __construct($db) 
     {
-       $this->db = new Db();
-    }
-
-    public static function wdb() : WorkingWithDB {
-        return self::$wdb ??= new WorkingWithDB();
+       $this->db = $db;
     }
     
 

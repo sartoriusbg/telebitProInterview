@@ -6,7 +6,7 @@ if ($_SESSION["id"] < 1) {
     header('Location: login.php');
 }
 $_SESSION['validated'] = 0;
-$workingDB = new WorkingWithDB();
+$workingDB = new WorkingWithDB(new Db());
 echo '<h1>'.$_SESSION['email'].'</h1>';
 $user = $workingDB->getUser($_SESSION['email']);
 if($_POST) {

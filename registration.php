@@ -11,7 +11,7 @@
     <?php
       require_once 'manipulateDB.php';
 
-      $workingDB = new WorkingWithDB();
+      $workingDB = new WorkingWithDB(new Db());
       $users = $workingDB->getUsers();
 
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
