@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="checkbox"] {
+    margin-top: 5px;
+  }
+  
+  .btn {
+display: inline-block;
+padding: 8px 16px;
+font-size: 16px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border: none;
+border-radius: 4px;
+  }
+  
+   .btn:hover {
+  background-color: #79a06b;
+}
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+  }
+  
+  #login-form-container {
+    margin: 50px 30% 0 30%;
+    min-width: 300px;
+  }
+  
+  #login-form {
+    padding: 20px 30px;
+    border: 1px solid #699d56;
+  }
+  
+  #login-form input,
+  #login-form button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    border: 2px solid #bdc7ba;
+    padding: 5px;
+  }
+  
+  #login-form input:hover,
+  #login-form select:hover {
+    border-color: #79a06b;
+  }
+  
+  #login-form input[disabled] {
+    pointer-events: none;
+  }
+  
+  .login_msg {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
